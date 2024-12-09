@@ -122,8 +122,8 @@
       { "clash_mode": "direct", "server": "local-dns" },
       { "clash_mode": "global", "server": "remote-dns" },
       { "rule_set": "GEOSITE-CN", "server": "local-dns" },
-      { "rule_set": "GEOLOCATION-!CN", "server": "remote-dns" },
-	  { "rule_set": "GEOSITE-CHAT", "server": "remote-dns" }
+      { "rule_set": "GEOSITE-CHAT", "server": "remote-dns" },
+      { "rule_set": "GEOLOCATION-!CN", "server": "remote-dns" }
     ],
     "fakeip": {
       "enabled": false,
