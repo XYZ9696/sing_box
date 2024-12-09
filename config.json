@@ -45,14 +45,18 @@
   ],
   "outbounds": [
     { "tag": "🚀 节点选择", "type": "selector", "outbounds": [ "🎈 自动选择" ] },
-    { "tag": "🤖 OpenAI", "type": "selector", "outbounds": ["🚀 节点选择", "🇯🇵 日本节点", "🐸 手动切换"] },
     { "tag": "🎈 自动选择", "type": "urltest", "outbounds": [ "{all}" ], "url": "https://www.gstatic.com/generate_204", "interval": "300s", "tolerance": 150 },
+    { "tag": "🤖 OpenAI", "type": "selector", "outbounds": ["🇯🇵 日本自动" , "🇺🇲 美国节点" , "🐸 手动切换"] },
     { "tag": "🎯 全球直连", "type": "selector", "outbounds": [ "direct", "block" ] },
     { "tag": "🛑 全球拦截", "type": "selector", "outbounds": [ "block", "direct" ] },
     { "tag": "🐟 漏网之鱼", "type": "selector", "outbounds": [ "🚀 节点选择", "🎯 全球直连" ] },
     { "tag": "🐸 手动切换", "type": "selector", "outbounds": ["{all}"]},
-    { "tag": "🇯🇵 日本节点", "type": "selector", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇯🇵|JP|jp|日本|日|Japan"] }] },
-    { "tag": "🇭🇰 香港节点", "type": "selector", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇭🇰|HK|hk|香港|港|HongKong"] }] },
+	{ "tag": "🇭🇰 香港节点", "type": "selector", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇭🇰|HK|hk|香港|港|HongKong"] }] },
+	{ "tag": "🇸🇬 SGP节点", "type": "selector", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇸🇬|🇰🇷|🇲🇾|🇹🇼 🇨🇳|🇹🇼|sg|SG|my|MY|kr|KR|tw|TW|坡|韩|马|台"] }] },
+	{ "tag": "🇯🇵 日本节点", "type": "selector", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇯🇵|JP|jp|日本|日|Japan"] }] },
+	{ "tag": "🇺🇲 美国节点", "type": "selector", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇺🇸|US|us|美国|美|United States"] }] },
+    { "tag": "🇯🇵 日本自动", "type": "selector", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇯🇵|JP|jp|日本|日|Japan"] }], "url": "http://www.gstatic.com/generate_204", "interval": "300s", "tolerance": 150 },
+	{ "tag": "🔯 香港自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇭🇰|HK|hk|香港|港|HongKong"] }], "url": "http://www.gstatic.com/generate_204", "interval": "300s", "tolerance": 150 },
     { "tag": "GLOBAL", "type": "selector", "outbounds": [ "direct", "block", "🚀 节点选择", "🎈 自动选择", "🎯 全球直连", "🛑 全球拦截", "🐟 漏网之鱼" ] },
     { "tag": "direct", "type": "direct" },
     { "tag": "dns-out", "type": "dns" },
@@ -76,7 +80,7 @@
       { "rule_set": "GEOIP-CN", "outbound": "🎯 全球直连" },
       { "rule_set": "GEOSITE-CN", "outbound": "🎯 全球直连" },
       { "rule_set": "GEOLOCATION-!CN", "outbound": "🚀 节点选择" },
-{ "rule_set": "GEOSITE-CHAT", "outbound": "🤖 OpenAI" }
+      { "rule_set": "GEOSITE-CHAT", "outbound": "🤖 OpenAI" }
     ],
     "final": "🐟 漏网之鱼",
     "auto_detect_interface": true
@@ -119,7 +123,7 @@
       { "clash_mode": "global", "server": "remote-dns" },
       { "rule_set": "GEOSITE-CN", "server": "local-dns" },
       { "rule_set": "GEOLOCATION-!CN", "server": "remote-dns" },
-	  { "rule_set": "GEOLOCATION-!CN", "server": "remote-dns" }
+	  { "rule_set": "GEOSITE-CHAT", "server": "remote-dns" }
     ],
     "fakeip": {
       "enabled": false,
