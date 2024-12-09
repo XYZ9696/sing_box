@@ -71,6 +71,7 @@
       { "tag": "GEOSITE-CHAT", "type": "remote", "format": "binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-chat-!cn.srs", "download_detour": "🎯 全球直连" }
 	],
     "rules": [
+      { "rule_set": "GEOSITE-CHAT", "outbound": "🤖 OpenAI" },
       { "protocol": "dns", "port": 53, "outbound": "dns-out" },
       { "clash_mode": "direct", "outbound": "direct" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
@@ -79,8 +80,7 @@
       { "ip_is_private": true, "outbound": "🎯 全球直连" },
       { "rule_set": "GEOIP-CN", "outbound": "🎯 全球直连" },
       { "rule_set": "GEOSITE-CN", "outbound": "🎯 全球直连" },
-      { "rule_set": "GEOLOCATION-!CN", "outbound": "🚀 节点选择" },
-      { "rule_set": "GEOSITE-CHAT", "outbound": "🤖 OpenAI" }
+      { "rule_set": "GEOLOCATION-!CN", "outbound": "🚀 节点选择" }
     ],
     "final": "🐟 漏网之鱼",
     "auto_detect_interface": true
