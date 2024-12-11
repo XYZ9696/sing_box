@@ -46,7 +46,7 @@
     }
   ],
   "outbounds": [
-    {"tag": "🚀 节点选择","type": "selector","outbounds": ["🎈 自动选择"，"🐸 手动切换"]},
+    {"tag": "🚀 节点选择","type": "selector","outbounds": ["🎈 自动选择","🐸 手动切换"]},
     {"tag": "🎈 自动选择","type": "urltest","outbounds": ["{all}"],"url": "https://www.gstatic.com/generate_204","interval": "300s","tolerance": 150},
     {"tag": "🤖 OpenAI", "type":"selector","outbounds": ["🇺🇲 美国自动", "🇯🇵 日本自动", "♻️ 亚洲自动","🐸 手动切换"] },
     {"tag": "🎯 全球直连","type": "selector","outbounds": ["direct","block"]},
