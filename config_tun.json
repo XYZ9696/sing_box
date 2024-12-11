@@ -77,7 +77,7 @@
     ],
     "rules": [
 	 {"protocol": "dns","port": 53,"outbound": "dns-out"},
-	 {"rule_set": "GEOSITE-CHAT","outbound": "🤖 OpenAI"}
+	 {"rule_set": "GEOSITE-CHAT","outbound": "🤖 OpenAI"},
 	 {"clash_mode": "direct","outbound": "direct"},
 	 {"clash_mode": "global","outbound": "GLOBAL"},
 	 {"network": "udp","port": 443,"outbound": "🛑 全球拦截"},
@@ -108,7 +108,7 @@
 	 {"clash_mode": "direct","server": "local-dns"},
 	 {"clash_mode": "global","server": "remote-dns"},
 	 {"rule_set": "GEOSITE-CN","server": "local-dns"},
-	 {"rule_set": "GEOLOCATION-!CN","server": "remote-dns"}
+	 {"rule_set": "GEOLOCATION-!CN","server": "remote-dns"},
 	 {"rule_set": "GEOSITE-CHAT","server": "remote-dns"}
     ],
     "fakeip": {
