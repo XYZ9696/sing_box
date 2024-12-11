@@ -44,7 +44,7 @@
     }
   ],
   "outbounds": [
-    { "tag": "🚀 节点选择", "type": "selector", "outbounds": [ "🎈 自动选择" ] },
+    { "tag": "🚀 节点选择", "type": "selector", "outbounds": [ "🎈 自动选择","🇯🇵 日本自动","🔯 香港自动" ] },
     { "tag": "🎈 自动选择", "type": "urltest", "outbounds": [ "{all}" ], "url": "https://www.gstatic.com/generate_204", "interval": "300s", "tolerance": 150 },
     { "tag": "🤖 OpenAI", "type": "selector", "outbounds": ["🇯🇵 日本自动" , "🇺🇲 美国节点" , "🐸 手动切换"] },
     { "tag": "🎯 全球直连", "type": "selector", "outbounds": [ "direct", "block" ] },
@@ -57,7 +57,7 @@
     { "tag": "🇺🇲 美国节点", "type": "selector", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇺🇸|US|us|美国|美|United States"] }] },
     { "tag": "🇯🇵 日本自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇯🇵|JP|jp|日本|日|Japan"] }], "url": "http://www.gstatic.com/generate_204", "interval": "300s", "tolerance": 150 },
     { "tag": "🔯 香港自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇭🇰|HK|hk|香港|港|HongKong"] }], "url": "http://www.gstatic.com/generate_204", "interval": "300s", "tolerance": 150 },
-    { "tag": "GLOBAL", "type": "selector", "outbounds": [ "direct", "block", "🚀 节点选择", "🎈 自动选择", "🎯 全球直连", "🛑 全球拦截", "🐟 漏网之鱼" ] },
+    { "tag": "GLOBAL", "type": "selector", "outbounds": [ "direct", "block", "🚀 节点选择","🎈 自动选择", "🇯🇵 日本自动","🔯 香港自动", "🎯 全球直连", "🛑 全球拦截", "🐟 漏网之鱼" ] },
     { "tag": "direct", "type": "direct" },
     { "tag": "dns-out", "type": "dns" },
     { "tag": "block", "type": "block" }
