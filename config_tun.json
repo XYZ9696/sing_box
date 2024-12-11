@@ -69,7 +69,7 @@
   
   "route": {
     "rule_set": [
-	 {"tag":"GEOSITE-CHAT","type":"remote","format":"binary", "url": "https://ghp.ci/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-chat-!cn.srs", "download_detour": "🎯 全球直连" },
+	 {"tag":"GEOSITE-CHAT","type":"remote","format":"binary", "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/openai.srs", "download_detour": "🎯 全球直连" },
 	 {"tag": "CATEGORY-ADS","type": "remote","format": "binary","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs","download_detour": "🎯 全球直连"},
 	 {"tag": "GEOIP-CN","type": "remote","format": "binary","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs","download_detour": "🎯 全球直连"},
 	 {"tag": "GEOSITE-CN","type": "remote","format": "binary","url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs","download_detour": "🎯 全球直连"},
