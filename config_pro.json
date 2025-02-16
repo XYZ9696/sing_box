@@ -34,7 +34,7 @@
       { "clash_mode": "global", "server": "proxyDns" },
       { "rule_set": "geosite-cn", "server": "localDns" },
       { "rule_set": "geosite-geolocation-!cn", "server": "proxyDns" },
-      { "query_type": ["A", "AAAA"], "server": "proxyDns" }  // 拦截所有 DNS 查询
+      { "query_type": ["A", "AAAA"], "server": "proxyDns" } 
     ],
     "final": "proxyDns",
     "strategy": "prefer_ipv4"
