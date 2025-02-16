@@ -23,26 +23,9 @@
 
   "dns": {
     "servers": [
-      {
-        "tag": "proxyDns",
-        "address": "https://dns.google/dns-query",
-        "address_resolver": "defaultDns",
-        "address_strategy": "prefer_ipv4",
-        "detour": "🚀 节点选择"
-      },
-      {
-        "tag": "localDns",
-        "address": "223.5.5.5",
-        "address_resolver": "defaultDns",
-        "address_strategy": "prefer_ipv4",
-        "detour": "🎯 全球直连"
-      },
-      {
-        "tag": "defaultDns",
-        "address": "223.5.5.5",
-        "address_strategy": "prefer_ipv4",
-        "detour": "🎯 全球直连"
-      }
+      { "tag": "proxyDns", "address": ["https://dns.google/dns-query", "https://1.1.1.1/dns-query"], "address_resolver": "defaultDns", "address_strategy": "prefer_ipv4", "detour": "🚀 节点选择" },
+      { "tag": "localDns", "address": "223.5.5.5", "address_resolver": "defaultDns", "address_strategy": "prefer_ipv4", "detour": "🎯 全球直连" },
+      { "tag": "defaultDns", "address": "223.5.5.5", "address_strategy": "prefer_ipv4", "detour": "🎯 全球直连" }
     ],
     "rules": [
       { "outbound": "any", "server": "defaultDns", "disable_cache": true },
@@ -56,22 +39,8 @@
   },
 
   "inbounds": [
-    {
-      "type": "tproxy",
-      "tag": "tproxy-in",
-      "listen": "0.0.0.0",
-      "listen_port": 7895,
-      "sniff": true,
-      "sniff_override_destination": false
-    },
-    {
-      "type": "mixed",
-      "tag": "mixed-in",
-      "listen": "127.0.0.1",
-      "listen_port": 2080,
-      "sniff": true,
-      "users": []
-    }
+    { "type": "tproxy", "tag": "tproxy-in", "listen": "0.0.0.0", "listen_port": 7895, "sniff": true, "sniff_override_destination": false },
+    { "type": "mixed", "tag": "mixed-in", "listen": "127.0.0.1", "listen_port": 2080, "sniff": true, "users": [] }
   ],
 
   "outbounds": [
@@ -81,7 +50,7 @@
     { "tag": "🍀 Google", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换"] },
     { "tag": "👨‍💻 Github", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换"] },
     { "tag": "🪟 Microsoft", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🎯 全球直连"] },
-    { "tag": "🐬 OneDrive", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换"] },
+    { "tag": "🐬 OneDrive", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动", "🇭㉿ 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换"] },
     { "tag": "🎵 TikTok", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换"] },
     { "tag": "🎥 Netflix", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换"] },
     { "tag": "📲 Telegram", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换"] },
