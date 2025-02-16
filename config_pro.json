@@ -69,7 +69,7 @@
     "default_mark": 666,
     "rules": [
       {"action": "sniff"},
-      {"protocol": "dns", "outbound": "🚀 节点选择"}, // 确保 DNS 流量通过代理，防止泄露
+      {"protocol": "dns", "outbound": "🚀 节点选择"},
       {"clash_mode": "direct", "outbound": "🎯 全球直连"},
       {"clash_mode": "global", "outbound": "GLOBAL"},
       {"domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🎯 全球直连"},
