@@ -34,8 +34,7 @@
      {"clash_mode": "Direct", "server": "dns_direct"},
      {"clash_mode": "Global", "server": "dns_proxy"},
      {"rule_set": "geosite-cn", "server": "dns_direct"},
-     {"rule_set": "geosite-geolocation-!cn", "server": "dns_proxy"},
-     { "protocol": "dns", "outbound": "dns_proxy" }
+     {"rule_set": "geosite-geolocation-!cn", "server": "dns_proxy"}
    ],
    "final": "dns_proxy",
    "strategy": "ipv4_only"
@@ -80,7 +79,8 @@
    "default_mark": 666,
    "rules": 
    [
-     { "protocol": "dns", "outbound": "dns_proxy" },
+     {"action": "sniff"},
+     {"protocol": "dns", "action": "hijack-dns"},
      {"clash_mode": "direct", "outbound": "🎯 全球直连"},
      {"clash_mode": "global", "outbound": "GLOBAL"},
      {"domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🎯 全球直连"},
