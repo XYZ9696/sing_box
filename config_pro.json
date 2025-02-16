@@ -47,7 +47,8 @@
       { "clash_mode": "direct", "server": "localDns" },
       { "clash_mode": "global", "server": "proxyDns" },
       { "rule_set": "geosite-cn", "server": "localDns" },
-      { "rule_set": "geosite-geolocation-!cn", "server": "proxyDns" }
+      { "rule_set": "geosite-geolocation-!cn", "server": "proxyDns" },
+      
     ],
     "final": "proxyDns",
     "strategy": "prefer_ipv4"
@@ -98,7 +99,7 @@
     "final": "🐠 漏网之鱼",
     "default_mark": 666,
     "rules": [
-      { "type": "logical", "mode": "or", "rules": [{ "port": 53 }, { "protocol": "dns" }], "action": "return" },
+      { "type": "logical", "mode": "or", "rules": [{ "port": 53 }, { "protocol": "dns" }], "action": "reject" },
       { "clash_mode": "direct", "outbound": "🎯 全球直连" },
       { "clash_mode": "global", "outbound": "GLOBAL" },
       { "domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🎯 全球直连" },
