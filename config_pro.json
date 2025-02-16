@@ -17,7 +17,7 @@
     "cache_file": {
       "enabled": true,
       "path": "/etc/sing-box/cache.db",
-      "store_fakeip": true  // 启用 FakeIP 缓存，减少 DNS 查询
+      "store_fakeip": true
     }
   },
 
