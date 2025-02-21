@@ -39,21 +39,22 @@
 },
 
 "inbounds": [
-  {
-    "type": "tun",
-    "interface_name": "tun0",
-    "inet4_address": ["172.19.0.1/30"],
-    "mtu": 1500,
-    "auto_route": true,
-    "strict_route": true,
-    "endpoint_independent_nat": true
-  },
-  {
-    "type": "mixed",
-    "listen": "0.0.0.0",
-    "listen_port": 7891
-  }
-],
+    {
+      "type": "tun",
+      "interface_name": "tun0",
+      "address": [
+        "172.18.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "auto_route": true,
+      "strict_route": true
+    },
+    {
+      "type": "mixed",
+      "listen": "0.0.0.0",
+      "listen_port": 7891
+    }
+  ],
   
   "outbounds": [
     { "tag": "🚀 节点选择", "type": "selector", "outbounds": ["🔯 香港自动", "🇭🇰 香港节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🐸 手动切换", "♻️ 自动选择", "🎯 全球直连"] },
