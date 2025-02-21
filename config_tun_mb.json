@@ -113,7 +113,7 @@
   {"tag": "geosite-apple", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/apple.srs"},
   {"tag": "geosite-microsoft", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/microsoft.srs"},
   {"tag": "geosite-onedrive", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/onedrive.srs"},
-  {"tag": "geosite-geolocation-!cn", "type": "local", "format": "binary", "path": "/data/adb/box/srs/sing-box/geolocation-!cn.srs"},
+  {"tag": "geosite-geolocation-!cn", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/geolocation-!cn.srs"},
   {"tag": "geosite-cn", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/cn.srs"},
   {"tag": "geosite-private", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/private.srs"}
   ]
