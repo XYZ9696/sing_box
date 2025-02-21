@@ -103,19 +103,19 @@
     ],
 
 "rule_set": [
-  {"tag": "geosite-chat", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/category-ai-chat-!cn.srs"},
-  {"tag": "geosite-youtube", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/youtube.srs"},
-  {"tag": "geosite-google", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/google.srs"},
-  {"tag": "geosite-github", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/github.srs"},
-  {"tag": "geosite-telegram", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/telegram.srs"},
-  {"tag": "geosite-tiktok", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/tiktok.srs"},
-  {"tag": "geosite-netflix", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/netflix.srs"},
-  {"tag": "geosite-apple", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/apple.srs"},
-  {"tag": "geosite-microsoft", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/microsoft.srs"},
-  {"tag": "geosite-onedrive", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/onedrive.srs"},
-  {"tag": "geosite-geolocation-!cn", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/geolocation-!cn.srs"},
-  {"tag": "geosite-cn", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/cn.srs"},
-  {"tag": "geosite-private", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/private.srs"}
+  {"tag": "geosite-chat", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/category-ai-chat-!cn.srs"},
+  {"tag": "geosite-youtube", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/youtube.srs"},
+  {"tag": "geosite-google", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/google.srs"},
+  {"tag": "geosite-github", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/github.srs"},
+  {"tag": "geosite-telegram", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/telegram.srs"},
+  {"tag": "geosite-tiktok", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/tiktok.srs"},
+  {"tag": "geosite-netflix", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/netflix.srs"},
+  {"tag": "geosite-apple", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/apple.srs"},
+  {"tag": "geosite-microsoft", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/microsoft.srs"},
+  {"tag": "geosite-onedrive", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/onedrive.srs"},
+  {"tag": "geosite-geolocation-!cn", "type": "local", "format": "binary", "path": "/data/adb/box/srs/sing-box/geolocation-!cn.srs"},
+  {"tag": "geosite-cn", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/cn.srs"},
+  {"tag": "geosite-private", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/srs/private.srs"}
   ]
     }
   }
