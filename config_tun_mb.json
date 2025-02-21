@@ -79,31 +79,111 @@
     {"tag": "dns-out", "type": "dns"}
   ],
   
-  "route": {
-      "auto_detect_interface": true,
-      "final": "🚀 节点选择",
-      "rules": [
-        {"type": "logical", "mode": "or", "rules": [{"port": 53}, {"protocol": "dns"}], "outbound": "dns-out"},
-        {"clash_mode": "direct", "outbound": "🎯 全球直连"},
-        {"clash_mode": "global", "outbound": "GLOBAL"},
-        {"domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🎯 全球直连"},
-        {"rule_set": ["geosite-private", "geoip-private"], "outbound": "🎯 全球直连"},
-        {"rule_set": "geosite-chat", "outbound": "🤖 OpenAI"},
-        {"rule_set": "geosite-github", "outbound": "👨‍💻 Github"},
-        {"rule_set": "geosite-youtube", "outbound": "📹 YouTube"},
-        {"rule_set": "geosite-onedrive", "outbound": "🐬 OneDrive"},
-        {"rule_set": "geosite-microsoft", "outbound": "🪟 Microsoft"},
-        {"rule_set": ["geoip-google", "geosite-google"], "outbound": "🍀 Google"},
-        {"rule_set": "geosite-tiktok", "outbound": "🎵 TikTok"},
-        {"rule_set": ["geoip-apple", "geosite-apple"], "outbound": "🍏 Apple"},
-        {"rule_set": ["geoip-netflix", "geosite-netflix"], "outbound": "🎥 Netflix"},
-        {"rule_set": ["geoip-telegram", "geosite-telegram"], "outbound": "📲 Telegram"},
-        {"rule_set": "geosite-geolocation-!cn", "outbound": "🚀 节点选择"},
-        {"rule_set": ["geoip-cn", "geosite-cn"], "outbound": "🎯 全球直连"}
-      ],
-      "rule_set": [
-        {"tag": "geosite-db", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/geosite.db"},
-        {"tag": "geoip-db", "type": "local", "format": "binary", "path": "/data/adb/box/sing-box/geoip.db"}
-      ]
+  "rule_set": [
+      {
+        "tag": "geosite-cn",
+        "type": "local",
+        "format": "source",
+        "rules": [
+          {"type": "domain", "value": ["baidu.com", "qq.com", "163.com"]}
+        ]
+      },
+      {
+        "tag": "geosite-geolocation-!cn",
+        "type": "local",
+        "format": "source",
+        "rules": [
+          {"type": "domain", "value": ["google.com", "youtube.com", "facebook.com"]}
+        ]
+      },
+      {
+        "tag": "geosite-private",
+        "type": "local",
+        "format": "source",
+        "rules": [
+          {"type": "domain", "value": ["192.168.0.0/16", "10.0.0.0/8"]}
+        ]
+      },
+      {
+        "tag": "geosite-chat",
+        "type": "local",
+        "format": "source",
+        "rules": [
+          {"type": "domain", "value": ["chat.openai.com"]}
+        ]
+      },
+      {
+        "tag": "geosite-github",
+        "type": "local",
+        "format": "source",
+        "rules": [
+          {"type": "domain", "value": ["github.com", "gist.github.com"]}
+        ]
+      },
+      {
+        "tag": "geosite-youtube",
+        "type": "local",
+        "format": "source",
+        "rules": [
+          {"type": "domain", "value": ["youtube.com", "youtu.be"]}
+        ]
+      },
+      {
+        "tag": "geosite-onedrive",
+        "type": "local",
+        "format": "source",
+        "rules": [
+          {"type": "domain", "value": ["onedrive.live.com"]}
+        ]
+      },
+      {
+        "tag": "geosite-microsoft",
+        "type": "local",
+        "format": "source",
+        "rules": [
+          {"type": "domain", "value": ["microsoft.com", "office.com"]}
+        ]
+      },
+      {
+        "tag": "geosite-google",
+        "type": "local",
+        "format": "source",
+        "rules": [
+          {"type": "domain", "value": ["google.com", "gmail.com"]}
+        ]
+      },
+      {
+        "tag": "geosite-tiktok",
+        "type": "local",
+        "format": "source",
+        "rules": [
+          {"type": "domain", "value": ["tiktok.com"]}
+        ]
+      },
+      {
+        "tag": "geosite-apple",
+        "type": "local",
+        "format": "source",
+        "rules": [
+          {"type": "domain", "value": ["apple.com", "icloud.com"]}
+        ]
+      },
+      {
+        "tag": "geosite-netflix",
+        "type": "local",
+        "format": "source",
+        "rules": [
+          {"type": "domain", "value": ["netflix.com"]}
+        ]
+      },
+      {
+        "tag": "geosite-telegram",
+        "type": "local",
+        "format": "source",
+        "rules": [
+          {"type": "domain", "value": ["telegram.org", "t.me"]}
+        ]
+      }
+    ]
   }
 }
