@@ -106,105 +106,79 @@
         "tag": "geosite-cn",
         "type": "local",
         "format": "source",
-        "rules": [
-          {"type": "domain", "value": ["baidu.com", "qq.com", "163.com"]}
-        ]
+        "domain": ["baidu.com", "qq.com", "163.com"]
       },
       {
         "tag": "geosite-geolocation-!cn",
         "type": "local",
         "format": "source",
-        "rules": [
-          {"type": "domain", "value": ["google.com", "youtube.com", "facebook.com"]}
-        ]
+        "domain": ["google.com", "youtube.com", "facebook.com"]
       },
       {
         "tag": "geosite-private",
         "type": "local",
         "format": "source",
-        "rules": [
-          {"type": "domain", "value": ["192.168.0.0/16", "10.0.0.0/8"]}
-        ]
+        "domain": ["192.168.0.0/16", "10.0.0.0/8"]
       },
       {
         "tag": "geosite-chat",
         "type": "local",
         "format": "source",
-        "rules": [
-          {"type": "domain", "value": ["chat.openai.com"]}
-        ]
+        "domain": ["chat.openai.com"]
       },
       {
         "tag": "geosite-github",
         "type": "local",
         "format": "source",
-        "rules": [
-          {"type": "domain", "value": ["github.com", "gist.github.com"]}
-        ]
+        "domain": ["github.com", "gist.github.com"]
       },
       {
         "tag": "geosite-youtube",
         "type": "local",
         "format": "source",
-        "rules": [
-          {"type": "domain", "value": ["youtube.com", "youtu.be"]}
-        ]
+        "domain": ["youtube.com", "youtu.be"]
       },
       {
         "tag": "geosite-onedrive",
         "type": "local",
         "format": "source",
-        "rules": [
-          {"type": "domain", "value": ["onedrive.live.com"]}
-        ]
+        "domain": ["onedrive.live.com"]
       },
       {
         "tag": "geosite-microsoft",
         "type": "local",
         "format": "source",
-        "rules": [
-          {"type": "domain", "value": ["microsoft.com", "office.com"]}
-        ]
+        "domain": ["microsoft.com", "office.com"]
       },
       {
         "tag": "geosite-google",
         "type": "local",
         "format": "source",
-        "rules": [
-          {"type": "domain", "value": ["google.com", "gmail.com"]}
-        ]
+        "domain": ["google.com", "gmail.com"]
       },
       {
         "tag": "geosite-tiktok",
         "type": "local",
         "format": "source",
-        "rules": [
-          {"type": "domain", "value": ["tiktok.com"]}
-        ]
+        "domain": ["tiktok.com"]
       },
       {
         "tag": "geosite-apple",
         "type": "local",
         "format": "source",
-        "rules": [
-          {"type": "domain", "value": ["apple.com", "icloud.com"]}
-        ]
+        "domain": ["apple.com", "icloud.com"]
       },
       {
         "tag": "geosite-netflix",
         "type": "local",
         "format": "source",
-        "rules": [
-          {"type": "domain", "value": ["netflix.com"]}
-        ]
+        "domain": ["netflix.com"]
       },
       {
         "tag": "geosite-telegram",
         "type": "local",
         "format": "source",
-        "rules": [
-          {"type": "domain", "value": ["telegram.org", "t.me"]}
-        ]
+        "domain": ["telegram.org", "t.me"]
       }
     ]
   }
