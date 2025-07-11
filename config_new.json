@@ -117,16 +117,10 @@
    "rules": 
    [
      {
-       "type": "logical",
-       "mode": "or",
-       "rules": [
-         {"port": 53},
-         {"protocol": "dns"}
-       ],
-       "outbound": "dns-out"
+       "type": "dns",
+       "server": "dns_proxy"
      },
      {"action": "sniff"},
-     {"protocol": "dns", "action": "hijack-dns"},
      {"clash_mode": "direct", "outbound": "🎯 全球直连"},
      {"clash_mode": "global", "outbound": "GLOBAL"},
      {"domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🎯 全球直连"},
