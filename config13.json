@@ -103,6 +103,10 @@
     "auto_detect_interface": true,
     "final": "🐠 漏网之鱼",
     "default_mark": 666,
+    "default_domain_resolver": {
+      "server": "dns_direct",
+      "strategy": "ipv4_only"
+    },
 
     "rules": [
       { "action": "sniff" },
