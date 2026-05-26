@@ -4,11 +4,7 @@
     "level": "info",
     "timestamp": true
   },
-  "cache_file": {
-    "enabled": true,
-    "path": "/etc/sing-box/cache.db",
-    "store_fakeip": false
-  },
+
   "experimental": {
     "clash_api": {
       "external_controller": "0.0.0.0:9095",
@@ -17,6 +13,11 @@
       "external_ui_download_url": "https://ghfast.top/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
       "external_ui_download_detour": "🎯 全球直连",
       "default_mode": "rule"
+    },
+  "cache_file": {
+    "enabled": true,
+    "path": "/etc/sing-box/cache.db",
+    "store_fakeip": false
     }
   },
   "dns": {
