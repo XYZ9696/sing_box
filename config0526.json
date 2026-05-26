@@ -23,15 +23,20 @@
   "dns": {
     "servers": [
       {
+        "type": "tls",
         "tag": "dns_proxy",
-        "address": "tls://8.8.8.8",
-        "strategy": "ipv4_only",
+        "server": "8.8.8.8",
+        "server_port": 853,
+        "domain_strategy": "ipv4_only",
         "detour": "🚀 节点选择"
       },
+
       {
+        "type": "udp",
         "tag": "dns_direct",
-        "address": "223.5.5.5",
-        "strategy": "ipv4_only",
+        "server": "223.5.5.5",
+        "server_port": 53,
+        "domain_strategy": "ipv4_only",
         "detour": "🎯 全球直连"
       }
     ],
@@ -42,18 +47,22 @@
         "server": "dns_direct",
         "disable_cache": true
       },
+
       {
         "clash_mode": "Direct",
         "server": "dns_direct"
       },
+
       {
         "clash_mode": "Global",
         "server": "dns_proxy"
       },
+
       {
         "rule_set": "geosite-cn",
         "server": "dns_direct"
       },
+
       {
         "rule_set": "geosite-geolocation-!cn",
         "server": "dns_proxy"
@@ -195,13 +204,17 @@
     {
       "tag": "🐸 手动切换",
       "type": "selector",
-      "outbounds": ["{all}"]
+      "outbounds": [
+        "{all}"
+      ]
     },
 
     {
       "tag": "🔯 香港自动",
       "type": "urltest",
-      "outbounds": ["{all}"],
+      "outbounds": [
+        "{all}"
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
       "tolerance": 50
@@ -210,7 +223,9 @@
     {
       "tag": "♻️ 自动选择",
       "type": "urltest",
-      "outbounds": ["{all}"],
+      "outbounds": [
+        "{all}"
+      ],
       "url": "http://www.gstatic.com/generate_204",
       "interval": "10m",
       "tolerance": 50
@@ -219,7 +234,9 @@
     {
       "tag": "GLOBAL",
       "type": "selector",
-      "outbounds": ["{all}"]
+      "outbounds": [
+        "{all}"
+      ]
     },
 
     {
