@@ -31,24 +31,11 @@
         "type": "udp",
         "tag": "dns_direct",
         "server": "223.5.5.5",
-        "server_port": 53,
-        "detour": "🎯 全球直连"
+        "server_port": 53
       }
     ],
 
     "rules": [
-      {
-        "outbound": "any",
-        "server": "dns_direct"
-      },
-      {
-        "clash_mode": "Direct",
-        "server": "dns_direct"
-      },
-      {
-        "clash_mode": "Global",
-        "server": "dns_proxy"
-      },
       {
         "rule_set": "geosite-cn",
         "server": "dns_direct"
@@ -86,16 +73,6 @@
       },
 
       {
-        "clash_mode": "direct",
-        "outbound": "🎯 全球直连"
-      },
-
-      {
-        "clash_mode": "global",
-        "outbound": "GLOBAL"
-      },
-
-      {
         "rule_set": "geosite-chat",
         "outbound": "🤖 OpenAI"
       },
@@ -111,12 +88,12 @@
       },
 
       {
-        "rule_set": ["geosite-google"],
+        "rule_set": "geosite-google",
         "outbound": "🍀 Google"
       },
 
       {
-        "rule_set": ["geosite-telegram"],
+        "rule_set": "geosite-telegram",
         "outbound": "📲 Telegram"
       },
 
@@ -131,7 +108,7 @@
       },
 
       {
-        "rule_set": ["geosite-apple"],
+        "rule_set": "geosite-apple",
         "outbound": "🍏 Apple"
       },
 
@@ -161,7 +138,20 @@
     {
       "type": "selector",
       "tag": "🚀 节点选择",
-      "outbounds": ["🎯 全球直连"]
+      "outbounds": [
+        "♻️ 自动选择",
+        "🎯 全球直连"
+      ]
+    },
+
+    {
+      "type": "urltest",
+      "tag": "♻️ 自动选择",
+      "outbounds": [
+        "🎯 全球直连"
+      ],
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": "10m"
     },
 
     {
